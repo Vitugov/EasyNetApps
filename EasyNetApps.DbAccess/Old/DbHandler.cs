@@ -47,7 +47,7 @@ namespace EasyNetApps.DbAccess.Old
             //    .Where(propertyOverview => propertyOverview.IsGenericClassSubClass);
             using (var context = DbContextCreator.Create())
             {
-                var query = context.DeepSet<T>().Where(e => e.Id == item.Id);
+                var query = DeepSet<T>(context).Where(e => e.Id == item.Id);
                 item = query.First();
                 foreach (var collectionProperty in collectionProperties)
                 {

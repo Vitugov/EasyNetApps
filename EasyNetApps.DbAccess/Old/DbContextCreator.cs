@@ -1,4 +1,6 @@
-﻿namespace EasyNetApps.DbAccess.Old
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace EasyNetApps.DbAccess.Old
 {
     public static class DbContextCreator
     {
